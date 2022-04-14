@@ -21,8 +21,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.compose.rally.R
 import com.example.compose.rally.data.Bill
+import com.example.compose.rally.data.UserData
 import com.example.compose.rally.ui.components.BillRow
 import com.example.compose.rally.ui.components.StatementBody
 
@@ -43,3 +45,10 @@ fun BillsBody(bills: List<Bill>) {
         }
     )
 }
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewBillsBody() {
+    BillsBody(bills = UserData.bills)
+}
+
